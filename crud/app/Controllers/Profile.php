@@ -12,5 +12,11 @@ class Profile extends Controller
         $data['profiles'] = $ProfileModel->orderBy('id','DESC')->findAll();
         return view('profile_view', $data);
     }
+
+    public function create()
+    {
+        return view('add_profile');
+    }
 }
+
 ?>
